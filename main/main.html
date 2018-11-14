@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>요가복도 스타일있게!</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <!--큰 css 적용 후 내 css를 적용하도록 밑에 위치-->
+    <link rel="stylesheet" href="../css/main.css">
+    <!--큰 css 적용 후 내 css를 적용하도록 밑에 위치-->
+
+    <!-- update the version number as needed -->
+    <!--defer = 모든것을 다 읽은 후 실행해 주세요!-->
+    <script defer src="/__/firebase/5.5.5/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.5.5/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.5.5/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.5.5/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--큰영역 순서지키기-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="clear wrap">
+            <ul class="hd_lt">
+                <li>ENGLISH<span class="arrow_down">∨</span></li>
+                <li>COUNTRY<span class="arrow_down">∨</span></li>
+                <li>FREE SHHIPPING FOR ALL ORDER OF $150</li>
+            </ul>
+            <ul class="hd_rt">
+                <li>FAQS</li>
+                <li>CONTACT US</li>
+                <li><span><i class="fas fa-envelope-o"></i></span>NEWSLETTER</li>
+                <li>
+                    <span><i class="fab fa-pinterest"></i></span>
+                    <span><i class="fab fa-youtube"></i></span>
+                    <span><i class="fab fa-instagram"></i></span>
+                    <span><i class="fas fa-envelope"></i></span>
+                    <span><i class="fab fa-google-plus"></i></span>
+                    <span><i class="fab fa-twitter"></i></span>
+                    <span><i class="fab fa-facebook"></i></span>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="wrap clear tops">
+        <!-- div.logos+ul.searchs>li*3^ul.logins>li*4 -->
+        <div class="logos">
+            <img src="../img/main/logo.svg" class="logo img">
+            <!--svg파일은 일러스트에서 백터파일을 익스폴트할때 svg로 추출하면 저장이 됨 
+                이미지가 든 폴더에 새로운 파일 만들기를 누른 후 정보를 복사 붙여넣기 해서 사용-->
+        </div>
+        <ul class="searchs">
+            <li>
+                <input type="text" class="w3-input" name="searchs" placeholder="Search for products">
+            </li>
+            <li>
+                <span class="hand">SELECT CATEGORY <span class="arrow_down">∨</span></span>
+                <!--select태그를 안쓰는이유 : 브라우저마다 다르게 나옴-->
+                <ul class="search_catelist">
+                    <li>Uncategorized</li>
+                    <li>Clocks</li>
+                    <li>Lighting</li>
+                    <li>Furniture</li>
+                    <li>Accessories</li>
+                    <li>Cooking</li>
+                    <li>Toys</li>
+                </ul>
+            </li>
+            <li>
+                <span class="fas fa-search"></span>
+            </li>
+        </ul>
+        <ul class="logins">
+            <li>$0.00</li>
+            <li>
+                <span class="fas fa-shopping-basket"></span>
+                <span class="w3-badge">0</span>
+            </li>
+            <li><span class="far fa-heart"></span></li>
+            <li>LOGIN/REGISTER</li>
+        </ul>
+    </section>
+    <section class="mains">
+        <ul class="navs wrap clear">
+            <li class="cate_top">
+                <span class="fas fa-bars"></span>
+                <span>BROWSE CATEGORIES</span>
+                <span class="arrow_down">∨</span>
+            </li>
+            <li class="menu">
+                <ul>
+                    <li class="txt_red">
+                        HOME<span class="arrow_down">∨</span>
+                        <div id="modal0" class="menu_modal clear"></div>
+                    </li>
+                    <li>
+                        SHOP<span class="arrow_down">∨</span>
+                        <div id="modal1" class="menu_modal"></div>
+                    </li>
+                    <li>
+                        BLOG <span class="arrow_down">∨</span>
+                        <div id="modal2" class="menu_modal clear">
+                            <div class="blogs"></div>
+                            <div class="recents">
+                                <div class="title">RECENT POSTS</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        PAGES<span class="arrow_down">∨</span>
+                        <div id="modal3" class="menu_modal"></div>
+                    </li>
+                    <li>
+                        ELEMENTS<span class="arrow_down">∨</span>
+                        <div id="modal4" class="menu_modal"></div>
+                    </li>
+                    <li>BUY</li>
+                </ul>
+            </li>
+            <li class="etc">
+                <span class="txt_red">SPECIAL OFFER</span>
+                <span>|</span>
+                <span>PURCHASE THEME</span>
+            </li>
+        </ul>
+    </section>
+    <section class="banners wrap">
+        <div class="cates clear">
+            <ul class="cate">
+
+            </ul>
+            <ul class="banner">
+                <li>
+                    <img src="../img/main/slider-main-demo-1.jpg" class="ban_img">
+                    <div class="ban_tit">Simple-</div>
+                    <div class="ban_tit">Rock Chair.</div>
+                    <div class="ban_cont">Semper vulputate aliquam curae condimentum quisque gravida fusce convallis
+                        arcu cum at.</div>
+                    <div class="ban_price">$199.00</div>
+                </li>
+                <li>
+                    <img src="../img/main/slider-main-demo-2.jpg" class="ban_img">
+                    <div class="ban_tit">Eames-</div>
+                    <div class="ban_tit">Side Chair.</div>
+                    <div class="ban_color clear">
+                        <div>color : </div>
+                        <div class="icon w3-teal">&nbsp;</div>
+                        <div class="icon w3-red">&nbsp;</div>
+                        <div class="icon w3-orange">&nbsp;</div>
+                    </div>
+                    <div class="ban_cont">Semper vulputate aliquam curae condimentum quisque gravida fusce convallis
+                        arcu cum at.</div>
+                    <div class="ban_price">Only $99.00</div>
+                </li>
+                <li>
+                    <img src="../img/main/slider-main-demo-3.jpg" class="ban_img">
+                    <div class="ban_stit">CAPPELLINI</div>
+                    <div class="ban_tit">Wooden</div>
+                    <div class="ban_tit">Lounge Chair.</div>
+                    <div class="ban_cont">Semper vulputate aliquam curae condimentum quisque gravida fusce convallis
+                        arcu cum at.</div>
+                    <div class="ban_price">$999.00</div>
+                </li>
+            </ul>
+        </div>
+        <div class="rt_arrow fas fa-angle-right"></div>
+    </section>
+    <footer></footer>
+    <script defer src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+    <script defer src="../js/Ajax.js"></script>
+    <script defer src="../js/main.js"></script>
+</body>
+
+</html>
